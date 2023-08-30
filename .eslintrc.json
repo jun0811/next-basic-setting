@@ -1,3 +1,28 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "eslint:recommended",
+    "plugin:prettier/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
+    "plugin:react-hooks/recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier"],
+  "rules": {
+    // 원하는 규칙을 설정할 수 있습니다.
+    "react/react-in-jsx-scope": "off",
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "all",
+        "endOfLine": "lf",
+        "semi": true,
+        "singleQuote": true,
+        "printWidth": 80,
+        "tabWidth": 2
+      }
+    ]
+  }
 }
